@@ -26,7 +26,7 @@ public class AddSupplierServlet extends HttpServlet {
         boolean success = supplierDAO.addSupplier(supplier);
 
         if (success) {
-            response.sendRedirect("viewSupplier.jsp?message=Supplier added successfully");
+            response.sendRedirect("ViewSupplierServlet?message=Supplier added successfully");
         } else {
             request.setAttribute("error", "Failed to add supplier");
             request.getRequestDispatcher("addSupplier.jsp").forward(request, response);
