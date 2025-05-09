@@ -19,7 +19,7 @@ public class DeleteSupplierServlet extends HttpServlet {
         boolean success = supplierDAO.deleteSupplier(supplierId);
 
         if (success) {
-            response.sendRedirect("viewSupplier.jsp?message=Supplier deleted successfully");
+            response.sendRedirect("ViewSupplierServlet?message=Supplier deleted successfully");
         } else {
             response.sendRedirect("deleteSupplier.jsp?error=Failed to delete supplier");
         }
